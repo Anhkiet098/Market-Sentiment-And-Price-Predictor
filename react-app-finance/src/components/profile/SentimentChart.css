@@ -1,0 +1,84 @@
+.sentiment-analysis-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 120px;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.chart-section {
+    width: 100%;
+    height: 500px;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.news-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.news-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.news-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    height: 100%;
+}
+
+.news-card:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Đảm bảo nội dung không bị tràn */
+.chart-container canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
